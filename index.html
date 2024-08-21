@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Piedra, Papel o Tijeras</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Juego de Piedra, Papel o Tijera</h1>
+        <p>¡Divertite jugando!</p>
+    </header>
+
+    <div id="contenedor">
+
+        <div id="seccionRegistrar" class="formularioAuth">
+            <h2>Crear cuenta</h2>
+            <form id="formularioRegistrar">
+                <label for="usuarioRegistrar">Nombre de usuario:</label>
+                <input type="text" id="usuarioRegistrar" required>
+                <label for="contrasenaRegistrar">Contraseña:</label>
+                <input type="password" id="contrasenaRegistrar" required>
+                <button type="submit">Crear cuenta</button>
+            </form>
+        </div>
+
+        <div id="seccionIngresar">
+            <div id="seccionLogin" class="formularioAuth">
+                <h2>Iniciar sesión</h2>
+                <form id="formularioLogin">
+                    <label for="usuarioLogin">Nombre de usuario:</label>
+                    <input type="text" id="usuarioLogin" required>
+                    <label for="contrasenaLogin">Contraseña:</label>
+                    <input type="password" id="contrasenaLogin" required>
+                    <button type="submit">Iniciar sesión</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="seccionJuego">
+            <div id="mensajeBienvenida" style="display: none;">
+                <h2>Bienvenido, <span id="nombreUsuario"></span>!</h2>
+                <button id="botonCerrarSesion">Cerrar sesión</button>
+            </div>
+            <h3>Elegí una opción:</h3>
+            <div class="botonesJuego">
+                <button class="botonJuego" data-eleccion="piedra">Piedra</button>
+                <button class="botonJuego" data-eleccion="papel">Papel</button>
+                <button class="botonJuego" data-eleccion="tijera">Tijera</button>
+            </div>
+            <div id="resultado"></div>
+        </div>
+    </div>
+
+    <script src="./js/usuario.js"></script>
+    <script src="./js/juego.js"></script>
+</body>
+
+</html>
