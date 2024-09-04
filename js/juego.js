@@ -1,6 +1,11 @@
 function manejarJuego(eleccionUsuario) {
     if (!usuarioActual) {
-        alert('Por favor, inicia sesión para jugar.');
+        Swal.fire({
+            title: 'Inicio de sesión requerido',
+            text: 'Por favor, inicia sesión para jugar.',
+            icon: 'warning',
+            confirmButtonText: 'Aceptar'
+        });
         return;
     }
 
@@ -17,7 +22,9 @@ function obtenerEleccionComputadora() {
 }
 
 function determinarResultado(eleccionUsuario, eleccionComputadora) {
-    if (eleccionUsuario === eleccionComputadora) return '¡Empate! Esto no va a quedar así...';
+    if (eleccionUsuario === eleccionComputadora) {
+        return '¡Empate! Esto no va a quedar así...';
+    }
 
     if (
         (eleccionUsuario === 'piedra' && eleccionComputadora === 'tijera') ||
@@ -33,6 +40,21 @@ function determinarResultado(eleccionUsuario, eleccionComputadora) {
 function mostrarResultado(eleccionUsuario, eleccionComputadora, resultado) {
     const mensaje = `Elegiste ${eleccionUsuario}. La computadora eligió ${eleccionComputadora}. Resultado: ${resultado}.`;
     document.getElementById('resultado').textContent = mensaje;
+
+    Swal.fire({
+        title: resultado.includes('Ganaste') ? '¡Ganaste!' : '¡Perdiste!',
+        text: resultado,
+        icon: resultado.includes('Ganaste') ? 'success' : 'error',
+        showCancelButton: true,
+        confirmButtonText: 'Aceptar',
+        cancelButtonText: 'Revancha'
+    }).then(result => {
+        if (result.isDismissed) {
+            console.log('El usuario decidió no jugar de nuevo.');
+        } else {
+            console.log('El usuario decidió jugar de nuevo.');
+        }
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {

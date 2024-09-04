@@ -32,7 +32,6 @@ header p {
     position: relative;
 }
 
-#seccionIngresar,
 #seccionRegistrar {
     display: flex;
     flex-direction: column;
@@ -68,16 +67,6 @@ input[type="text"], input[type="password"] {
     border: 1px solid #ced4da;
     border-radius: 4px;
     font-size: 1em;
-}
-
-.input-error {
-    border: 1px solid #dc3545;
-    background-color: #f8d7da;
-}
-
-.input-success {
-    border: 1px solid #28a745;
-    background-color: #d4edda;
 }
 
 button {
@@ -127,4 +116,73 @@ h3 {
 #resultado {
     margin-top: 20px;
     font-size: 1.2em;
+}
+
+#seccionUsuarios {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#seccionUsuarios h2 {
+    color: #007bff;
+    margin: 0 0 10px;
+}
+
+#verTodosBtn {
+    color: #007bff;
+    background-color: #ffffff;
+    border: 1px solid #007bff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px; 
+}
+
+#verTodosBtn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+#listaUsuarios {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#listaUsuarios li {
+    font-size: 1.1em;
+    padding: 5px;
+    border-bottom: 1px solid #ced4da;
+    color: #495057;
+}
+
+#listaUsuarios li:last-child {
+    border-bottom: none;
+}
+
+#verMenosBtn {
+    display: none; 
+    color: #007bff;
+    background-color: #ffffff;
+    border: 1px solid #007bff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+#verMenosBtn:hover {
+    background-color: #007bff;
+    color: white;
 }
