@@ -70,7 +70,7 @@ function registrarUsuario(event) {
     const contrasenaInput = document.getElementById('contrasenaRegistrar');
 
     const nombreCompleto = nombreCompletoInput.value.trim();
-    const usuario = usuarioInput.value.trim();
+    const usuario = usuarioInput.value.trim().toLowerCase();
     const contrasena = contrasenaInput.value.trim();
 
     if (nombreCompleto && usuario && contrasena) {
@@ -107,7 +107,7 @@ function iniciarSesion(event) {
     const usuarioInput = document.getElementById('usuarioLogin');
     const contrasenaInput = document.getElementById('contrasenaLogin');
 
-    const usuario = usuarioInput.value.trim();
+    const usuario = usuarioInput.value.trim().toLowerCase();
     const contrasena = contrasenaInput.value.trim();
 
     const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
