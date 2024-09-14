@@ -1,3 +1,5 @@
+Juego de piedra, papel o tijera
+
 Funcionalidades
 
 Registro de Usuarios: Permite a los usuarios crear una cuenta con un nombre de usuario y una contraseña.
